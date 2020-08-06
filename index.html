@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Survey Form</title>
+        <style>
+        body{
+            background-image: url("bg_img.jpg");
+            font-family:Arial, Helvetica, sans-serif;
+            line-height:2em;
+            text-align:center;    
+            background-repeat: no-repeat;
+            background-size:cover;
+            color:white;
+        }
+        #title{
+            font-size: 25px;
+            padding-top:10px;
+            text-align:center;
+        }
+        input{
+             font-size:20px;
+             margin:10px;
+             margin-top:15px;
+        }
+        .form1{
+             font-size:20px;   
+             padding:10px;
+             box-shadow: 0 10px 20px rgba(255,255,255), 0 6px 6px rgba(255,255,255);
+             width:70%;
+             margin-left:auto;
+             margin-right:auto;
+             border-radius: 20px;
+        }
+        #sub{
+             background-color: lightblue;
+             font-size:20px;
+             padding:10px;
+             border:2px solid black;
+             border-radius:10px;
+        }
+        #sub:hover{
+            background-color:darkblue;
+            color:white;
+        }
+        .ele_group input{
+             width:70%;
+        }
+        textarea{
+             width:70%;
+             height:30%;
+             word-wrap: break-word;
+             font-size:20px;
+        }
+        textarea::placeholder{
+            font-size:20px;
+        }
+        #description{
+            text-align:center;
+        }
+        select {
+            font-size:20px;
+        }
+        </style>
+    </head>
+    <body>
+        <header id="title">
+            <h1>Customer Feedback Survey Form</h1><hr>
+        </header>
+        <p id="description">Thank You for taking time to help us improve our service.</p>
+        <form id="survey_form">
+            <div class="form1">  
+                <main class="ele_group">    
+                    <label id="name_label">Name</label><br>
+                    <input type="text" id="name" placeholder="Enter Name" required><br><br>
+
+                    <label id="Email_label">Email</label><br>
+                    <input type="email" id="email" placeholder="Enter Email" required><br><br>
+                
+                    <label id="Bill_Amount_Label">Bill Amount</label><br>
+                    <input type="number" id="number" placeholder="Enter Bill Amount" required min="100" max="1000"><br><br>
+                </main>    
+               <main>
+                    <label>Is this the first time you are using our Products and services?</label><br>
+                    <select id="droplist"> 
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><br><br>
+               </main>
+               <main>
+                    <label>Would you recommend it to your friends and colleagues?</label><br>
+                    <input type="radio" name="r1" value="Yes">Yes<br>
+                    <input type="radio" name="r1" value="No"> No<br><br>
+               </main>    
+               
+               <main>
+                    <label>How satisfied are you with our company overall?</label><br>
+                    <input type="checkbox" name="ch1" value="Very Satisfied"/>Very Satisfied
+                    <input type="checkbox" name="ch2" value="Satisfied"/>Satisfied
+                    <input type="checkbox" name="ch3" value="Undecided"/>Undecided
+                    <input type="checkbox" name="ch4" value="Unsatisfied"/>Unsatisfied<br><br>
+                </main>
+               <main>
+                    <label>Do you have any suggestions to improve our product and service?</label><br>
+                    <textarea ></textarea><br><br>
+               </main>
+                <input type="submit" value="Submit" id="sub">
+           </div>
+        </form>
+    </body>
+</html>
